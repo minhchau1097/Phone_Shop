@@ -1,8 +1,10 @@
 # Phone_Shop
 Team Size: 2
+
 Team members:
 
 Hữu Minh
+
 Minh Châu
 
 
