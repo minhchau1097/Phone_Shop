@@ -1,5 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+header .navbar {
+  background-color: #131212;
+}
+header .navbar .nav-item:hover .nav-link {
+  transform: scale(1.2);
+}
+header .right-content :hover {
+  transform: scale(1.2);
+}
+header .right-content i {
+  color: #fff;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+header .right-content .content-number {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  line-height: 16px;
+  background-color: #fff;
+  text-align: center;
+  top: -6px;
+  transition: all 0.5s;
+}
+header .right-content .content-display {
+  position: relative;
+}
+header .nav-item .nav-link {
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.carousel {
+  padding-top: 60px;
+}
+.carousel .carousel-item .item {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

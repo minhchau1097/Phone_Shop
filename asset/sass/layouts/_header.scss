@@ -1,0 +1,48 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    .navbar {
+        background-color: #131212;
+        .nav-item:hover .nav-link{
+            transform: scale(1.2);
+        }
+    }
+
+    .right-content {
+        :hover {
+            transform: scale(1.2);
+        }
+        
+        i {
+            color: #fff;
+            // font-size: 24px;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .content-number {
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            line-height: 16px;
+            background-color: #fff;
+            text-align: center;
+            top: -6px;
+            transition: all 0.5s;
+        }
+        .content-display{
+            position: relative;
+            
+        }
+    }
+
+    
+
+    .nav-item .nav-link {
+        color: #fff;
+        transition: all 0.5s;
+    }
+}
