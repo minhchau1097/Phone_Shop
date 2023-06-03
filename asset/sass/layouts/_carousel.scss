@@ -4,7 +4,21 @@
         display: flex;
         justify-content: space-between;
     }
-    .carousel-item .item-text h3{
-
+    .carousel-indicators{
+        bottom: -80px;
+    }
+    .carousel-indicators li{
+        background: #000;
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+        border-radius: 50%;
+        border: none;
+       
+}
+}
+@include Reponsive($md){
+    .carousel-item .item-text{
+        font-size: 12px;
     }
 }
