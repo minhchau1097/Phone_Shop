@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+body {
+  font-family: Montserrat;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -34,6 +38,7 @@ header .right-content .content-number {
   text-align: center;
   top: -6px;
   transition: all 0.5s;
+  font-size: 12px;
 }
 header .right-content .content-display {
   position: relative;
@@ -49,4 +54,21 @@ header .nav-item .nav-link {
 .carousel .carousel-item .item {
   display: flex;
   justify-content: space-between;
+}
+.carousel .carousel-indicators {
+  bottom: -80px;
+}
+.carousel .carousel-indicators li {
+  background: #000;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  border-radius: 50%;
+  border: none;
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-item .item-text {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=main.css.map */
