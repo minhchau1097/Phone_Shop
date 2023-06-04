@@ -71,4 +71,93 @@ header .nav-item .nav-link {
   .carousel-item .item-text {
     font-size: 12px;
   }
+}
+.product {
+  padding-top: 200px;
+}
+.product .card {
+  height: 480px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 4px 4px 9px 9px rgba(11, 134, 235, 0.11);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.product .card::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.631372549);
+  opacity: 0;
+}
+.product .card:hover {
+  transform: scale(1.2);
+}
+.product .card:hover::after {
+  opacity: 1;
+}
+.product .card:hover .foot {
+  opacity: 1;
+  transform: translateY(0);
+}
+.product .card .foot {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-210px);
+  transition: all 0.3s;
+}
+.product .card .foot h3 {
+  margin-top: 40px;
+}
+.product .card .foot p {
+  font-size: 12px;
+}
+.product .card .foot p:first-of-type {
+  margin-top: 40px;
+}
+.product .card:hover .foot-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+.product .card .foot-btn {
+  z-index: 10;
+  position: absolute;
+  bottom: 24px;
+  left: 25%;
+  margin: 0 auto;
+  transform: translateY(70px);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.product .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product .card label {
+  text-align: center;
+  width: 0px;
+  height: 30px;
+  padding: 5px 16px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  background: rgba(0, 128, 0, 0.2);
+}
+.product .card .card-body h3,
+.product .card p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 576px) {
+  .product .card {
+    height: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
