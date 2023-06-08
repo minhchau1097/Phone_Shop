@@ -48,6 +48,41 @@ header .nav-item .nav-link {
   transition: all 0.5s;
 }
 
+.modal .modal-dialog {
+  position: unset;
+}
+.modal .modal-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+}
+.modal .modal-header {
+  border: none;
+  align-items: center;
+}
+.modal .modal-header h5 {
+  flex: auto;
+}
+.modal .modal-header .close {
+  margin: 0;
+  padding: 0;
+}
+.modal #table-list img {
+  width: 50px;
+  height: 30px;
+  max-width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal .btnQuantity {
+  border: none;
+  background: none;
+}
+
 .carousel {
   padding-top: 60px;
 }

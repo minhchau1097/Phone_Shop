@@ -1,3 +1,6 @@
+const domId = (id) => document.getElementById(id);
+
+
 let renderProduct = (arrProduct) => {
     let content = '';
     arrProduct.forEach(function (product, index) {
@@ -21,13 +24,13 @@ let renderProduct = (arrProduct) => {
                 <p>Front camera: ${product.frontCamera}</p>
                 </div>
                 <div class='foot-btn'>
-                    <button class='btn btn-danger' onclick ='btnAdd()'>Add To Cart</button>
+                    <button class='btn btn-danger' data-toggle="modal" data-target="#exampleModal" onclick ='btnAdd(${product.id})'>Add To Cart</button>
                     </div>
             </div>
         </div>
         `;
     });
-    document.getElementById('product-list').innerHTML = content;
+    domId('product-list').innerHTML = content;
 }
 
 
@@ -58,4 +61,66 @@ function typeBrand(arrProduct) {
     });
     renderProduct(newArr);
     label(newArr);
+}
+
+
+let renderTable = (arr,) => {
+    let content = '';
+    arr.forEach((product) => {
+
+
+
+        content += `
+        <tr>
+        <td>
+        <img class='w-100' src="${product.img}" alt="${product.type}" />
+        </td>
+        <td>${product.name}</td>
+        <td> 
+        <div>
+        <button onclick = 'btnDecrease("${product.id}")'> <i class="fa-regular fa-circle-left"></i></button>
+        <span class='quantity'>${product.quantity}</span>
+        <button onclick = 'btnIncrease("${product.id}")'><i class="fa-regular fa-circle-right"></i></button>
+        </td>
+        </div>
+        <td>${product.price}</td>
+        <td>
+        <button><i class="fa-solid fa-trash"></i></button>
+        </td>
+        
+        </tr>
+        
+        `;
+
+
+    });
+    domId('table-list').innerHTML = content;
+};
+const changeQuantity = (total, index) => {
+    return document.getElementsByClassName('quantity')[index].innerHTML = total;
+}
+
+const addToCart = (product) => {
+    let cartItem = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        img: product.img,
+        quantity: 1
+    };
+
+    let isProductInCart = false;
+    for (let i = 0; i < cartList.arr.length; i++) {
+        if (cartList.arr[i].id === cartItem.id) {
+            cartList.arr[i].quantity++;
+            isProductInCart = true;
+            break;
+        }
+    }
+
+    if (!isProductInCart) {
+        cartList.arr.push(cartItem);
+    }
+
+
 }
