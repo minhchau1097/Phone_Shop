@@ -1,4 +1,7 @@
 function Product(id, name, price, screen, backCamera, frontCamera, img, desc, type) {
+    this.arr = [];
+
+
     this.id = id;
     this.name = name;
     this.price = price;
@@ -8,4 +11,10 @@ function Product(id, name, price, screen, backCamera, frontCamera, img, desc, ty
     this.img = img;
     this.desc = desc;
     this.type = type;
+
+
+
+    this.themSP = (arr) => {
+        this.arr.push(arr)
+    }
 };

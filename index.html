@@ -41,7 +41,7 @@
                 </div>
                 <div class="right-content">
                     <div class="content-display">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i></a>
                         <span class="content-number">0</span>
                     </div>
                 </div>
@@ -176,11 +176,44 @@
                 <option value="Samsung">Samsung</option>
             </select>
             <div class="row" id="product-list">
-                
+
             </div>
         </div>
     </section>
 
+
+    <!-- modal -->
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                        <table class="table">
+                            <tbody id="table-list"></tbody>
+                        </table>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
