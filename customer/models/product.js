@@ -1,5 +1,5 @@
 function Product(id, name, price, screen, backCamera, frontCamera, img, desc, type) {
-    this.arr = [];
+
 
 
     this.id = id;
@@ -13,8 +13,4 @@ function Product(id, name, price, screen, backCamera, frontCamera, img, desc, ty
     this.type = type;
 
 
-
-    this.themSP = (arr) => {
-        this.arr.push(arr)
-    }
 };

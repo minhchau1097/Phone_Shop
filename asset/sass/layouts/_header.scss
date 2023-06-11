@@ -52,11 +52,20 @@ header {
 
 // modal
 
-.modal {
-    
-    .modal-dialog {
-        position: unset;
 
+.modal {
+    @media screen and (min-width:$xs) {
+        .modal-dialog {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        position: unset;
+        margin: 0;
     }
 
     .modal-content {
@@ -70,26 +79,70 @@ header {
     .modal-header {
         border: none;
         align-items: center;
-        h5{
+
+        h5 {
             flex: auto;
         }
+
         .close {
             margin: 0;
             padding: 0;
         }
     }
+
     #table-list {
-        img{
-            width: 50px;
-            height: 30px;
-            max-width: 30px;
-            border-radius: 50%;
+        img {
+
+            height: 50px;
+            max-width: 50px;
+
             margin-right: 5px;
             object-fit: cover;
         }
+
+        button {
+            border: none;
+            background: none;
+        }
     }
-    .btnQuantity{
-        border: none;
-        background: none;
+
+    #total {
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        right: 16px;
+
+        span {
+            align-self: flex-end;
+        }
+    }
+}
+
+@include Reponsive($md) {
+    .modal .modal-content {
+        width: 70%;
+    }
+}
+
+@include Reponsive($sm) {
+    .modal .modal-content {
+        width: 80%;
+    }
+}
+
+@include Reponsive($xs) {
+    .modal {
+
+        .modal-content {
+            width: 100%;
+        }
+
+         #table-list {
+            font-size: 12px;
+            img{
+            height: auto;
+            max-width: 30px;
+         }
+        }
     }
 }
