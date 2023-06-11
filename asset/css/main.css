@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
 body {
-  font-family: Montserrat;
-}
-
-* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
 }
 
 header {
@@ -48,8 +48,17 @@ header .nav-item .nav-link {
   transition: all 0.5s;
 }
 
+@media screen and (min-width: 576px) {
+  .modal .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+}
 .modal .modal-dialog {
+  width: 100%;
+  height: 100%;
   position: unset;
+  margin: 0;
 }
 .modal .modal-content {
   position: absolute;
@@ -70,19 +79,48 @@ header .nav-item .nav-link {
   padding: 0;
 }
 .modal #table-list img {
-  width: 50px;
-  height: 30px;
-  max-width: 30px;
-  border-radius: 50%;
+  height: 50px;
+  max-width: 50px;
   margin-right: 5px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.modal .btnQuantity {
+.modal #table-list button {
   border: none;
   background: none;
 }
+.modal #total {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+}
+.modal #total span {
+  align-self: flex-end;
+}
 
+@media screen and (max-width: 992px) {
+  .modal .modal-content {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal .modal-content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .modal .modal-content {
+    width: 100%;
+  }
+  .modal #table-list {
+    font-size: 12px;
+  }
+  .modal #table-list img {
+    height: auto;
+    max-width: 30px;
+  }
+}
 .carousel {
   padding-top: 60px;
 }

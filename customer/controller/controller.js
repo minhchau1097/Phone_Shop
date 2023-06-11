@@ -85,7 +85,7 @@ let renderTable = (arr,) => {
         </div>
         <td>${product.price}</td>
         <td>
-        <button><i class="fa-solid fa-trash"></i></button>
+        <button onclick = 'btnDelete(${product.id})'><i class="fa-solid fa-trash"></i></button>
         </td>
         
         </tr>
@@ -123,4 +123,31 @@ const addToCart = (product) => {
     }
 
 
+}
+
+const renderCart = (arr) => {
+    let totalPrice = 0;
+    arr.forEach((product) => {
+        totalPrice += product.price * product.quantity;
+    })
+
+
+
+    document.getElementsByClassName('total-price')[0].innerHTML = `Total: ${totalPrice}`;
+}
+
+
+const layThongTin = (arr) => {
+    const product = new Product(arr.id, arr.name, arr.price, arr.screen, arr.backCamera, arr.frontCamera, arr.img, arr.desc, arr.type)
+
+    return product;
+}
+
+const totalQuantity = (arr) => {
+    let total = 0;
+arr.forEach((item)=>{
+    total+= item.quantity;
+    
+})
+document.getElementsByClassName('content-number')[0].innerHTML = total;
 }
