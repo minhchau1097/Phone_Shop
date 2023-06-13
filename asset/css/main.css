@@ -146,7 +146,7 @@ header .nav-item .nav-link {
   }
 }
 .product {
-  padding-top: 200px;
+  padding: 200px 0;
 }
 .product .card {
   height: 480px;
@@ -201,10 +201,11 @@ header .nav-item .nav-link {
 }
 .product .card .foot-btn {
   z-index: 10;
+  text-align: center;
   position: absolute;
   bottom: 24px;
   left: 25%;
-  margin: 0 auto;
+  right: 25%;
   transform: translateY(70px);
   opacity: 0;
   transition: all 0.3s;
@@ -232,5 +233,27 @@ header .nav-item .nav-link {
 @media screen and (max-width: 576px) {
   .product .card {
     height: 100%;
+  }
+  .product .card:hover {
+    transform: none;
+  }
+}
+.footerPhone {
+  padding: 60px 0;
+  color: #fff;
+  background: #000;
+}
+.footerPhone .nav-link {
+  color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  .footerPhone {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footerPhone {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=main.css.map */

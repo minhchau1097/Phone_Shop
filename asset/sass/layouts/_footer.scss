@@ -1,0 +1,18 @@
+.footerPhone{
+    padding: 60px 0;
+    color: #fff;
+    background: #000;
+    .nav-link{
+        color: #fff;
+    }
+}
+@include Reponsive($xs) {
+    .footerPhone{
+        font-size: 12px;
+    }
+}
+@include Reponsive($sm) {
+    .footerPhone{
+        font-size: 14px;
+    }
+}

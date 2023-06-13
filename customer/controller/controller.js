@@ -5,7 +5,7 @@ let renderProduct = (arrProduct) => {
     let content = '';
     arrProduct.forEach(function (product, index) {
         content += `
-        <div class='col-12 col-sm-6 col-lg-3 '>
+        <div class='col-10 col-sm-6 col-lg-4 col-xl-3  mx-auto mx-sm-0 mt-5 mt-sm-5'>
         <div class='card p-4'>
                 <img class='card-img-top' src="${product.img}" alt="${product.type}" />
                 <div class="card-body">
