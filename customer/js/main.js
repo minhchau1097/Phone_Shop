@@ -54,7 +54,7 @@ const cartList = {
     arr: [],
 
     timViTri: function (id) {
-        let index = this.arr.findIndex((item) => item.id === id);
+        let index = this.arr.findIndex((item) => item.id == id);
         return index;
     }
 };
