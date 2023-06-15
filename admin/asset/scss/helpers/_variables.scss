@@ -1,0 +1,51 @@
+//break points
+$breakpoints: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);
+
+// color
+$color-0: #fff;
+$color-1: grey;
+$color-2:rgb(211, 215, 216);
+$color-3:white;
+$color-4:#f3ce5e;
+$color-5:black;
+$color-6:rgba(29, 38, 113, 0.8);
+$color-7:rgba(195, 55, 100, 0.8);
+$color-8:hsla(216, 83%, 68%, 0.31);
+
+
+// font
+
+$fs1: 16px;
+$fs2: 40px;
+
+$fw1: 400;
+
+// flex
+$fl1: flex;
+
+$ait1: center;
+
+$jute1: center;
+$jute2: flex-start;
+$jute3: flex-end;
+
+
+// margin
+$mg-1: 20px auto;
+$mg-t-1: 200px;
+
+// padding
+$pd-1:5px 12px;
+$pd-2:0 0 16px;
+// wtdth
+$w-1:250px;
+$w-2:100%;
+
+//height
+$h-1:2px;
+$h-2:250px;

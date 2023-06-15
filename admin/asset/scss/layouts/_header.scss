@@ -1,0 +1,26 @@
+header {
+    background-color: $color-5;
+    a {
+        text-align: center;
+    }
+    .nav1{
+        @include flex-w($fl1, $jute2, $w-2);
+        .nav-item .nav-link{
+            color: $color-0;
+            &:hover{
+                color: $color-5;
+            }
+        }
+        
+    }
+    .nav2 {
+        @include flex-w($fl1, $jute3, $w-2);
+        .nav-item .nav-link{
+            color: $color-0;
+            &:hover{
+                color: $color-5;
+            }
+        }
+    }
+}
+

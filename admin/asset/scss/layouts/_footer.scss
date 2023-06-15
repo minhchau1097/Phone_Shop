@@ -1,0 +1,17 @@
+footer {
+    background: linear-gradient($color-6, $color-7);
+
+    a {
+        text-decoration: none !important;
+        &:hover{
+            color: $color-5 !important;
+        }
+    }
+    .test{
+        text-align: left; 
+        .cyberPhone {
+            padding: $pd-2;
+           
+        }
+    }
+}

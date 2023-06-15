@@ -82,8 +82,7 @@ header .nav-item .nav-link {
   height: 50px;
   max-width: 50px;
   margin-right: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .modal #table-list button {
   border: none;
@@ -211,8 +210,7 @@ header .nav-item .nav-link {
   transition: all 0.3s;
 }
 .product .card img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .product .card label {
   text-align: center;
