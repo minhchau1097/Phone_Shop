@@ -64,7 +64,7 @@ const getPhoneInfo = function (id) {
 
 const getPhoneList = () => {
     api
-        .callApi("Phone", "GET", null)
+        .callApi("product", "GET", null)
         .then((res) => {
             renderPhoneList(res.data);
         })
@@ -98,7 +98,7 @@ const createPhone = () => {
     }
 
     api
-        .callApi("Phone", "POST", phone)
+        .callApi("product", "POST", phone)
         .then((res) => {
             console.log(res);
             getPhoneList();
@@ -113,7 +113,7 @@ window.createPhone = createPhone;
 
 // Delete
 const deletePhone = (id) => {
-    api.callApi(`Phone/${id}`, "DELETE", null)
+    api.callApi(`product/${id}`, "DELETE", null)
         .then((res) => {
             console.log(res);
             getPhoneList();
@@ -133,7 +133,7 @@ const editPhone = (id) => {
     document.getElementsByClassName('modal-footer')[0].innerHTML = valueOfFooter;
 
     api
-        .callApi(`Phone/${id}`, "GET", null)
+        .callApi(`product/${id}`, "GET", null)
         .then((res) => {
             const phone = res.data;
             getEle('name').value = phone.name;
@@ -156,7 +156,7 @@ window.editPhone = editPhone;
 const updatePhone = (id) => {
     const phone = getPhoneInfo(id);
 
-    api.callApi(`Phone/${id}`, "PUT", phone)
+    api.callApi(`product/${id}`, "PUT", phone)
         .then((res) => {
             getPhoneList();
         })
@@ -185,7 +185,7 @@ getEle("btnSearchPhone").onclick = function () {
 }
 
 const getPhoneSearch = (term) => {
-    api.callApi("Phone", "GET", null)
+    api.callApi("product", "GET", null)
         .then((res) => {
             if(term.trim() === ""){
                 renderPhoneList(res.data);
@@ -196,10 +196,8 @@ const getPhoneSearch = (term) => {
                         result.push(res.data[i]);
                     }
                 }
-                renderPhoneList(result);
-            }
-            
-            
+               return renderPhoneList(result);
+            }  
         })
         .catch((err) => {
             console.log(err);
@@ -209,7 +207,7 @@ const getPhoneSearch = (term) => {
 // Increase 
 
 getEle('btnIncrease').onclick = () => {
-    api.callApi("Phone", "GET", null)
+    api.callApi("product", "GET", null)
         .then((res) => {
             let result = res.data;
             for(let i = 0; i < result.length - 1; i++) {
@@ -234,7 +232,7 @@ getEle('btnIncrease').onclick = () => {
 // Decrease 
 
 getEle('btnDecrease').onclick = () => {
-    api.callApi("Phone", "GET", null)
+    api.callApi("product", "GET", null)
         .then((res) => {
             let result = res.data;
             for(let i = 0; i < result.length - 1; i++) {
